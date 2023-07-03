@@ -9,7 +9,17 @@
 >> git push -u origin master  #push current repo in master
 >> git push origin develop  ## push in branch
 
->>
+>>another some time again need to do exeuction then this process will follow
+git init
+git add . 
+git remote add origin https://github.com/anil-phd/LearningPandas.git  #again connection
+git remote -v
+git status
+git push origin master # push in branch
+
+and pull all new updation in loca
+git pull
+
 
 #Executing git init creates a .git subdirectory in the current working directory, 
 which contains all of the necessary Git metadata for the new repository.
@@ -28,38 +38,3 @@ which contains all of the necessary Git metadata for the new repository.
 	7.1 For your first time pushing any branch, use this instead: "git push --set-upstream <https://something/foo/bar.git> <your branch name>"
 	7.2 From now on, you can incorporate changes from the online branch to your local by using "git pull".
 	7.3 If changes are made on master that should be in your branch, checkout your branch and use "git rebase master".
-
-
-
-
-
-list_of_values = [25000, 30000]
-df2 = df[df['Fee'].isin(list_of_values)]
-
-# Using isin([]) method to get opposite rows
-df2 = df[~df['Fee'].isin([25000, 30000])]
-
-# Using DataFrame.query() method to select rows
-df2 = df.query('Discount in [1000,2000]')
-
-# Filter Rows by list of values
-df2 = df.query('Discount == [1000,2000]')
-
-# Select list of rows using variable
-list_of_value = [1000,2000]
-df2 = df.query('Discount in @list_of_value')
-
-# Using DataFrame.query() method
-list_of_value = [1000,2000]
-df2 = df.query('Discount == @list_of_value')
-
-# Select rows using DataFrame.loc[] to apply() and lambda function 
-df2 = df.loc[df.apply(lambda x: x.Fee in [20000,22000], axis=1)]
-
-# Select pandas rows based on list index
-index_list = [0,2]
-df2 = df.loc[df.index[index_list]]
-
-# Using DataFrame.iloc[] to select rows list index
-index_list = [0,2]
-df2 = df.iloc[index_list]
