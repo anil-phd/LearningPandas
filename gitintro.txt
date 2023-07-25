@@ -2,6 +2,7 @@
 >> git init
 >> git clone https://SEW-TataPower@dev.azure.com/SEW-TataPower/ComputerVision/_git/ComputerVision_V2   ##if clone from main branch
 >> git clone https://SEW-TataPower@dev.azure.com/SEW-TataPower/ComputerVision/_git/ComputerVision_V2 --branch develop  ## clone from branch
+
 # Paste your desired folder into the cloned folder
 >> git add .
 >> git status # checking the status for current folder
