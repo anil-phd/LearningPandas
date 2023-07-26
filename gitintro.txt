@@ -1,9 +1,9 @@
-## Git command for ComputerVision V2
+## Git command for ComputerVision V2,  
 >> git init
 >> git clone https://SEW-TataPower@dev.azure.com/SEW-TataPower/ComputerVision/_git/ComputerVision_V2   ##if clone from main branch
 >> git clone https://SEW-TataPower@dev.azure.com/SEW-TataPower/ComputerVision/_git/ComputerVision_V2 --branch develop  ## clone from branch
 
-# Paste your desired folder into the cloned folder
+# Paste your desired folder into the cloned folder, go inside computervisionv2 folder and start below process for
 >> git add .
 >> git status # checking the status for current folder
 >> git commit -m "upload new code in repo"
@@ -39,3 +39,15 @@ which contains all of the necessary Git metadata for the new repository.
 	7.1 For your first time pushing any branch, use this instead: "git push --set-upstream <https://something/foo/bar.git> <your branch name>"
 	7.2 From now on, you can incorporate changes from the online branch to your local by using "git pull".
 	7.3 If changes are made on master that should be in your branch, checkout your branch and use "git rebase master".
+
+
+
+
+got to inside computervisionv2 folder
+
+first make connection with folder
+
+git init
+git add -A
+git commit -m "ocr"
+git push origin develop
