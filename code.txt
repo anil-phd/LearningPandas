@@ -1,0 +1,16 @@
+grouped = df.groupby("meter_number")
+total = grouped.size().rename("total_count")
+count_3kw = grouped["Over_3kwh"].apply(lambda x: (x == 1).sum()).rename("count_3kw")
+
+# count where Over_6kwh == 0
+count_6kw = grouped["Over_6kwh"].apply(lambda x: (x == 1).sum()).rename("count_6kw")
+
+# combine results
+df_counts = pd.concat([total, count_3kw, count_6kw], axis=1)
+
+# calculate percentages
+df_counts["percentage_3kw"] = ((df_counts["count_3kw"] / df_counts["total_count"]) * 100).round(4)
+df_counts["percentage_6kw"] = ((df_counts["count_6kw"] / df_counts["total_count"]) * 100).round(4)
+
+# reset index for final table
+df_counts = df_counts.reset_index()
